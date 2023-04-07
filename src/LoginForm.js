@@ -5,7 +5,7 @@ function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
 
   return (
     <>
@@ -14,8 +14,20 @@ function LoginForm() {
         <button>logout</button>
       </div>
       <form autoComplete="off">
-        <input type="text" placeholder="username" name="username" />
-        <input type="text" placeholder="password" name="password" />
+        <input
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          type="text"
+          placeholder="username"
+          name="username"
+        />
+        <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          type="text"
+          placeholder="password"
+          name="password"
+        />
         <button>submit</button>
       </form>
     </>
