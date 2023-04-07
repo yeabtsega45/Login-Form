@@ -3,6 +3,10 @@ import React from "react";
 function LoginForm() {
   return (
     <>
+      <div>
+        <h1>you have successfully logged in</h1>
+        <button>logout</button>
+      </div>
       <form autoComplete="off">
         <input type="text" placeholder="username" name="username" />
         <input type="text" placeholder="password" name="password" />
