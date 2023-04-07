@@ -3,7 +3,11 @@ import React from "react";
 function LoginForm() {
   return (
     <>
-      <h1>LoginForm</h1>
+      <form>
+        <input type="text" />
+        <input type="text" />
+        <button>submit</button>
+      </form>
     </>
   );
 }
