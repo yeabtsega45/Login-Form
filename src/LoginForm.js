@@ -8,31 +8,50 @@ function LoginForm() {
   const [error, setError] = useState(false);
   const handleForm = (e) => {
     e.preventDefault();
+    if (username === "truename" && password === "admin") {
+      console.log("success");
+      setLoggedIn(true);
+      setUsername("");
+      setPassword("");
+    } else {
+      console.log("error");
+      setError("invalid");
+    }
   };
 
   return (
     <>
-      <div>
-        <h1>you have successfully logged in</h1>
-        <button>logout</button>
-      </div>
-      <form onSubmit={handleForm} autoComplete="off">
-        <input
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          type="text"
-          placeholder="username"
-          name="username"
-        />
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="text"
-          placeholder="password"
-          name="password"
-        />
-        <button>submit</button>
-      </form>
+      {loggedIn ? (
+        <div>
+          <h1>you have successfully logged in</h1>
+          <button
+            onClick={() => {
+              setLoggedIn(false);
+            }}
+          >
+            logout
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={handleForm} autoComplete="off">
+          <p>{error}</p>
+          <input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+            placeholder="username"
+            name="username"
+          />
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            placeholder="password"
+            name="password"
+          />
+          <button>submit</button>
+        </form>
+      )}
     </>
   );
 }
