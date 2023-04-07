@@ -3,9 +3,15 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+}
+input{
+    margin-bottom: 5px;
 }
 button {
+    font-weight: bolder;
     background-color: lightgrey;
-    border-radius: 5px;
+    border-radius: 15px;
+    /* border: none; */
+    margin-top: 5px;
+    padding: 10px;
 }
