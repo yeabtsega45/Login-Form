@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+button {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
