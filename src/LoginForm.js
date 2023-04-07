@@ -3,9 +3,9 @@ import React from "react";
 function LoginForm() {
   return (
     <>
-      <form>
-        <input type="text" />
-        <input type="text" />
+      <form autoComplete="off">
+        <input type="text" placeholder="username" name="username" />
+        <input type="text" placeholder="password" name="password" />
         <button>submit</button>
       </form>
     </>
