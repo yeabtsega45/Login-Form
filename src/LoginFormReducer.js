@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import "./LoginForm.css";
 
 function LoginForm() {
@@ -27,6 +27,7 @@ function LoginForm() {
           <button
             onClick={() => {
               setLoggedIn(false);
+              setError(false);
             }}
           >
             logout

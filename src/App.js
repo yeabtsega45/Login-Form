@@ -1,10 +1,12 @@
 import "./App.css";
-import LoginForm from "./LoginForm";
+// import LoginFormuseState from "./LoginFormuseState";
+import LoginFormReducer from "./LoginFormReducer";
 
 function App() {
   return (
     <div className="App">
-      <LoginForm />
+      {/* <LoginFormuseState /> */}
+      <LoginFormReducer />
     </div>
   );
 }
