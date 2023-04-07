@@ -6,6 +6,9 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
   const [error, setError] = useState(false);
+  const handleForm = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -13,7 +16,7 @@ function LoginForm() {
         <h1>you have successfully logged in</h1>
         <button>logout</button>
       </div>
-      <form autoComplete="off">
+      <form onSubmit={handleForm} autoComplete="off">
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
