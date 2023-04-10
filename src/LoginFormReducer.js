@@ -39,7 +39,7 @@ function LoginForm() {
 
   return (
     <>
-      {loggedIn ? (
+      {updateState.loggedIn ? (
         <div>
           <h1>you have successfully logged in</h1>
           <button
@@ -54,9 +54,9 @@ function LoginForm() {
         </div>
       ) : (
         <form onSubmit={handleForm} autoComplete="off">
-          <p>{error}</p>
+          <p>{updateState.error}</p>
           <input
-            value={username}
+            value={updateState.username}
             onChange={(e) =>
               dispatch({ type: "USERNAME", value: e.target.value })
             }
@@ -65,7 +65,7 @@ function LoginForm() {
             name="username"
           />
           <input
-            value={password}
+            value={updateState.password}
             onChange={(e) =>
               dispatch({ type: "PASSWORD", value: e.target.value })
             }
