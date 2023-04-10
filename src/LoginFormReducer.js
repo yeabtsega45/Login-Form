@@ -9,15 +9,44 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log(state, action);
+  // console.log(state, action);
   switch (action.type) {
-    case "SUCCESS":
+    case "SUCCESS": {
       return {
         ...state,
         loggedIn: true,
         username: "",
         password: "",
       };
+    }
+    case "ERROR": {
+      return {
+        ...state,
+        error: "invalid",
+      };
+    }
+    case "LOGOUT": {
+      return {
+        ...state,
+        loggedIn: false,
+        error: false,
+      };
+    }
+    case "USERNAME": {
+      return {
+        ...state,
+        username: action.value,
+      };
+    }
+    case "PASSWORD": {
+      return {
+        ...state,
+        password: action.value,
+      };
+    }
+    default: {
+      return state;
+    }
   }
 };
 
