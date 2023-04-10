@@ -1,7 +1,16 @@
 import React, { useReducer } from "react";
 import "./LoginForm.css";
 
+const initialState = {
+  username: "",
+  password: "",
+  loggedIn: false,
+  error: false,
+};
+
 function LoginForm() {
+  const [updateState, dispatch] = useReducer(reducer, initialState);
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
