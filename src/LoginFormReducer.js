@@ -23,6 +23,8 @@ const reducer = (state, action) => {
       return {
         ...state,
         error: "invalid",
+        username: "",
+        password: "",
       };
     }
     case "LOGOUT": {
