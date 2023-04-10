@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const reducer = (state, action) => {
-  // console.log(state, action);
+  console.log(state, action);
   switch (action.type) {
     case "SUCCESS": {
       return {
@@ -52,6 +52,7 @@ const reducer = (state, action) => {
 
 function LoginForm() {
   const [updateState, dispatch] = useReducer(reducer, initialState);
+  console.log(updateState);
 
   //   const [username, setUsername] = useState("");
   //   const [password, setPassword] = useState("");
