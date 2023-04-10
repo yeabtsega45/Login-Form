@@ -8,7 +8,18 @@ const initialState = {
   error: false,
 };
 
-const reducer = (state, action) => {};
+const reducer = (state, action) => {
+  console.log(state, action);
+  switch (action.type) {
+    case "SUCCESS":
+      return {
+        ...state,
+        loggedIn: true,
+        username: "",
+        password: "",
+      };
+  }
+};
 
 function LoginForm() {
   const [updateState, dispatch] = useReducer(reducer, initialState);
