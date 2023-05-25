@@ -5,15 +5,21 @@ form {
     align-items: center;
 }
 input{
-    margin-bottom: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 button {
-    font-weight: bolder;
-    background-color: lightgrey;
-    border-radius: 15px;
-    /* border: none; */
-    margin-top: 5px;
-    padding: 10px;
+    width: 365px;
+    height: 50px;
+    font-size: large;
+    color: #fff;
+    background-color: #0074b1;
+    border-radius: 5px;
+    cursor: pointer;
 }
 p {
     color: red;

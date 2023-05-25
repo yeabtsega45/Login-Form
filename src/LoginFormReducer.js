@@ -83,7 +83,7 @@ function LoginForm() {
   return (
     <>
       {updateState.loggedIn ? (
-        <div>
+        <div className="logout">
           <h1>you have successfully logged in</h1>
           <button
             onClick={() => {

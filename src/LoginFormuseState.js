@@ -22,7 +22,7 @@ function LoginForm() {
   return (
     <>
       {loggedIn ? (
-        <div>
+        <div className="logout">
           <h1>you have successfully logged in</h1>
           <button
             onClick={() => {
