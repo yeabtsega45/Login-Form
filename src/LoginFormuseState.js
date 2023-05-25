@@ -51,6 +51,9 @@ function LoginForm() {
             name="password"
           />
           <button>submit</button>
+          <p>hint :</p>
+          <p>name=truename</p>
+          <p>password=admin</p>
         </form>
       )}
     </>
