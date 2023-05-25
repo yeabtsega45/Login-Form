@@ -22,7 +22,7 @@ const reducer = (state, action) => {
     case "ERROR": {
       return {
         ...state,
-        error: "invalid",
+        error: "wrong password",
         username: "",
         password: "",
       };
@@ -97,7 +97,7 @@ function LoginForm() {
         </div>
       ) : (
         <form onSubmit={handleForm} autoComplete="off">
-          <p>{updateState.error}</p>
+          <p className="error">{updateState.error}</p>
           <input
             value={updateState.username}
             onChange={(e) =>

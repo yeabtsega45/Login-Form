@@ -15,7 +15,7 @@ function LoginForm() {
       setPassword("");
     } else {
       console.log("error");
-      setError("invalid");
+      setError("wrong password");
     }
   };
 
@@ -35,7 +35,7 @@ function LoginForm() {
         </div>
       ) : (
         <form onSubmit={handleForm} autoComplete="off">
-          <p>{error}</p>
+          <p className="error">{error}</p>
           <input
             value={username}
             onChange={(e) => setUsername(e.target.value)}

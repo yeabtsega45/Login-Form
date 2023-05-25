@@ -10,6 +10,9 @@ form {
     justify-content: center;
     align-items: center;
 }
+.error {
+    color: red;
+}
 input{
     width: 350px;
     height: 50px;
@@ -28,6 +31,5 @@ button {
     cursor: pointer;
 }
 p {
-    color: red;
     margin: 5px;
 }
